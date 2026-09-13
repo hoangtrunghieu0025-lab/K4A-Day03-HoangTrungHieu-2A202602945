@@ -17,21 +17,21 @@
     "id": "TC03",
     "type": "appointment_booking",
     "question": "Tôi muốn đặt lịch khám chuyên khoa Tim mạch với bác sĩ Nguyễn Minh Anh tại Vinmec vào lúc 09:00 ngày 20/09/2026.",
-    "expected_behavior": "Agent phát sinh Tool Call 'book_appointment' với đúng bác sĩ, chuyên khoa, cơ sở và thời gian.",
+    "expected_behavior": "Agent xác nhận chuyên khoa, bác sĩ, cơ sở, thời gian và tự động phát sinh Tool Call đặt lịch khám.",
     "complexity": "Medium"
   },
   {
     "id": "TC04",
     "type": "multi_step_reasoning",
-    "question": "Tôi cần khám Tim mạch tại Vinmec. Hãy tra cứu lịch bác sĩ Nguyễn Minh Anh, rồi đặt lịch lúc 09:00 ngày 20/09/2026 nếu còn chỗ.",
-    "expected_behavior": "Agent thực hiện chuỗi ReAct: tra cứu lịch trước, sau đó gọi book_appointment nếu khung giờ còn trống.",
+    "question": "Tôi cần khám Tim mạch tại Vinmec. Hãy tra cứu lịch làm việc của bác sĩ Nguyễn Minh Anh, tìm khung giờ còn trống gần nhất rồi đặt lịch lúc 09:00 ngày 20/09/2026 nếu còn chỗ.",
+    "expected_behavior": "Agent thực hiện chuỗi ReAct: tra cứu lịch làm việc và khung giờ trống trước, sau đó chỉ đặt lịch nếu bác sĩ và thời gian phù hợp.",
     "complexity": "High"
   },
   {
     "id": "TC05",
     "type": "edge_case_handling",
-    "question": "Hãy tra cứu lịch làm việc của bác sĩ Không Tồn Tại tại Vinmec và thông báo rõ ràng nếu không có dữ liệu.",
-    "expected_behavior": "Agent xử lý kết quả NOT_FOUND và không tự bịa lịch khám.",
+    "question": "Hãy tra cứu lịch làm việc của bác sĩ Không Tồn Tại tại Vinmec. Nếu không tìm thấy bác sĩ hoặc lịch khám, hãy thông báo rõ ràng và không tự bịa thông tin.",
+    "expected_behavior": "Agent xử lý kết quả không tìm thấy, thông báo lịch sự rằng chưa có dữ liệu phù hợp và không tự bịa lịch khám.",
     "complexity": "Medium"
   }
 ]

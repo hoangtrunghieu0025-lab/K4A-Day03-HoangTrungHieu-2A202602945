@@ -62,7 +62,7 @@ Mục tiêu cốt lõi của Bài Lab này là giúp học viên tự tay phát 
 
 Thay vì chỉ sinh văn bản hội thoại đơn thuần như Chatbot cơ bản, tác tử (Agent) của bạn sẽ có khả năng:
 1. **Tự suy luận và chọn công cụ:** Chủ động kích hoạt vòng lặp ReAct (`Thought -> Action -> Observation`) qua giao thức **Model Context Protocol (MCP)** để truy vấn dữ liệu thực tế.
-2. **Tổng hợp câu trả lời chính xác:** Sử dụng dữ liệu thực tế từ Tool trả về để trả lời sinh viên, tránh hiện tượng ảo giác (Hallucination).
+2. **Tổng hợp câu trả lời chính xác:** Sử dụng dữ liệu lịch khám thực tế từ Tool trả về để trả lời người bệnh, tránh hiện tượng ảo giác (Hallucination).
 3. **Trích xuất bằng chứng (Trace Log):** Ghi lại file vết `docs/trace_waterfall.json` chứng minh chuỗi suy luận từng bước của Agent.
 
 > 🌐 **GIAO THỨC MODEL CONTEXT PROTOCOL (MCP):**  
