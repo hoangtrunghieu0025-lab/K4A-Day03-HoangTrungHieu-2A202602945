@@ -2,36 +2,36 @@
   {
     "id": "TC01",
     "type": "direct_query",
-    "question": "Chào bạn, bạn có thể giới thiệu các dịch vụ đặt lịch khám của Vinmec không?",
-    "expected_behavior": "Chatbot trả lời trực tiếp từ System Prompt, không cần gọi Tool.",
+    "question": "Chào bạn, bạn có thể giới thiệu quy chế học vụ cơ bản của Đại học VinUni không?",
+    "expected_behavior": "Chatbot trả lời trực tiếp từ System Prompt, không cần gọi bất kỳ Tool nào.",
     "complexity": "Low"
   },
   {
     "id": "TC02",
     "type": "single_tool_query",
-    "question": "Hãy tra cứu lịch làm việc của bác sĩ Nguyễn Minh Anh chuyên khoa Tim mạch tại Vinmec vào ngày 20/09/2026.",
-    "expected_behavior": "Agent phát sinh Tool Call 'doctor_schedule_query' với đúng chuyên khoa, bác sĩ, cơ sở và ngày cần tra cứu.",
+    "question": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "expected_behavior": "Agent nhận diện nhu cầu tra cứu, tự động phát sinh Tool Call 'academic_query' với mã SV2026001.",
     "complexity": "Medium"
   },
   {
     "id": "TC03",
     "type": "appointment_booking",
-    "question": "Tôi muốn đặt lịch khám chuyên khoa Tim mạch với bác sĩ Nguyễn Minh Anh tại Vinmec vào lúc 09:00 ngày 20/09/2026.",
-    "expected_behavior": "Agent phát sinh Tool Call 'book_appointment' với đúng bác sĩ, chuyên khoa, cơ sở và thời gian.",
+    "question": "TODO: [Học viên tự viết câu hỏi yêu cầu Agent đặt lịch hẹn tư vấn học vụ]",
+    "expected_behavior": "Agent tự động phát sinh Tool Call 'schedule_appointment' với đúng thời gian và thông tin sinh viên.",
     "complexity": "Medium"
   },
   {
     "id": "TC04",
     "type": "multi_step_reasoning",
-    "question": "Tôi cần khám Tim mạch tại Vinmec. Hãy tra cứu lịch bác sĩ Nguyễn Minh Anh, rồi đặt lịch lúc 09:00 ngày 20/09/2026 nếu còn chỗ.",
-    "expected_behavior": "Agent thực hiện chuỗi ReAct: tra cứu lịch trước, sau đó gọi book_appointment nếu khung giờ còn trống.",
+    "question": "TODO: [Học viên tự viết câu hỏi yêu cầu Agent suy luận ReAct đa bước (Tra cứu -> Đặt lịch với Cố vấn)]",
+    "expected_behavior": "Agent thực hiện chuỗi suy luận ReAct: Tra cứu cố vấn học tập của sinh viên trước, sau đó tiến hành đặt lịch hẹn.",
     "complexity": "High"
   },
   {
     "id": "TC05",
     "type": "edge_case_handling",
-    "question": "Hãy tra cứu lịch làm việc của bác sĩ Không Tồn Tại tại Vinmec và thông báo rõ ràng nếu không có dữ liệu.",
-    "expected_behavior": "Agent xử lý kết quả NOT_FOUND và không tự bịa lịch khám.",
+    "question": "TODO: [Học viên tự viết câu hỏi tra cứu mã sinh viên không tồn tại (ví dụ SV9999999)]",
+    "expected_behavior": "Agent nhận kết quả NOT_FOUND từ Tool và đưa ra phản hồi lịch sự, chính xác không bịa đặt dữ liệu.",
     "complexity": "Medium"
   }
 ]
